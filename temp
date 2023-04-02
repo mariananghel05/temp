@@ -43,16 +43,16 @@ cd stellarium/
 cd ..
 sudo /bin/rm -r stellarium/
 
-cd /etc/systemd/system/
-/bin/mkdir getty@tty1.service.d
-cd getty@tty1.service.d
-echo "[Service]
+sudo cd /etc/systemd/system/
+sudo mkdir getty@tty1.service.d
+sudo cd getty@tty1.service.d
+sudo echo "[Service]
 Type=simple
 ExecStart=
 ExecStart=-/sbin/agetty --autologin $username --noclear %I 38400 linux" > override.conf
 
 cd ~
-echo "#Startx Automatically
+sudo echo "#Startx Automatically
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 . startx
 logout
