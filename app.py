@@ -6,7 +6,8 @@ root.attributes("-fullscreen", True)
 root.title("Astronomie")
 root.minsize(1280, 800)
 root.maxsize(1280, 800)
-root.config(background="#212133")
+root.config(background="#212133",cursor="circle")
+
 
 # configure the grid
 root.columnconfigure(0, weight=1)
@@ -24,5 +25,5 @@ def start_stellarium():
 
 logo = PhotoImage(file="stellarium.png")
 label = Label(text="stellarium", background="#212133", foreground="#ffffff").grid(row=1, column=1)
-button1 = Button(root, image=logo, background="#212133", activebackground="#212144",width=500, height=250, borderwidth=5, command=start_stellarium).grid(row=1, column=1)
+button1 = Button(root, image=logo, cursor="circle", background="#212133", activebackground="#212144",width=500, height=250, borderwidth=5, command=start_stellarium).grid(row=1, column=1)
 root.mainloop()
