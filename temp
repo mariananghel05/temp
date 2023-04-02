@@ -36,6 +36,8 @@ git clone https://aur.archlinux.org/stellarium.git
 cd stellarium/
 gpg --recv-keys 9380E47C0374E169
 makepkg -si --noconfirm
+cd ..
+sudo rm -r stellarium/
 
 
 
