@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Check if is Arch based System
+#Install package: xorg, xorg-xinit nano vim opera python python-pip.
+
+if [ -d /etc/pacman.d ]
+then
+    sudo /bin/pacman -S xorg xorg-xinit nano vim opera python python-pip --noconfirm
+fi
+
+
+#Continue if last command finished with no errors.
+if [ $? -eq 0 ]
+then
+    #Configuring xinitrc
+    sudo head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
+fi
