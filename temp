@@ -14,4 +14,6 @@ if [ $? -eq 0 ]
 then
     #Configuring xinitrc
     sudo head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
+    sudo echo " python app.py" >> ~/.xinitrc
 fi
+
