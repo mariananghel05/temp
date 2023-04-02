@@ -5,7 +5,7 @@
 
 if [ -d /etc/pacman.d ]
 then
-    sudo /bin/pacman -S xorg xorg-xinit nano vim opera python python-pip --noconfirm
+    sudo /bin/pacman -S xorg xorg-xinit nano vim opera python python-pip ninja cmake qt6-tools qt6 gpsd --noconfirm
 fi
 
 #Python packages
@@ -23,4 +23,19 @@ then
 fi
 
 echo "startx" >> ~/.bashrc
+
+#draft
+cd
+git clone https://aur.archlinux.org/calcmysky.git
+cd calcmysky/
+makepkg -si --noconfirm
+cd ..
+sudo rm -r calcmysky/
+
+git clone https://aur.archlinux.org/stellarium.git 
+cd stellarium/
+gpg --recv-keys 9380E47C0374E169
+makepkg -si --noconfirm
+
+
 
