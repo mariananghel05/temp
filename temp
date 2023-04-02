@@ -26,26 +26,30 @@ fi
 
 
 #draft
-/bin/cd
+cd
 /bin/git clone https://aur.archlinux.org/calcmysky.git
-/bin/cd calcmysky/
+cd calcmysky/
 /bin/makepkg -si --noconfirm
-/bin/cd ..
+cd ..
 sudo /bin/rm -r calcmysky/
 
 /bin/git clone https://aur.archlinux.org/stellarium.git 
-/bin/cd stellarium/
+cd stellarium/
 /bin/gpg --recv-keys 9380E47C0374E169
 /bin/makepkg -si --noconfirm
-/bin/cd ..
+cd ..
 sudo /bin/rm -r stellarium/
 
-/bin/cd /etc/systemd/system/
+cd /etc/systemd/system/
 /bin/mkdir getty@tty1.service.d
-/bin/cd getty@tty1.service.d
+cd getty@tty1.service.d
 echo "[Service]
 Type=simple
 ExecStart=
 ExecStart=-/sbin/agetty --autologin astronomy --noclear %I 38400 linux" > override.conf
+
+cd ~
+
+
 
 
