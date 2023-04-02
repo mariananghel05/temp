@@ -18,7 +18,7 @@ root.rowconfigure(1, weight=1)
 root.rowconfigure(2, weight=1)
 
 def start_stellarium():
-    bashCommand = "opera -e https://www.google.com/search?q=stellarium&sxsrf=APwXEdfSW8Ztg_qaoa3f2csBX-5nCYqXnQ%3A1680445890485&ei=wpEpZIyfHZCN9u8P3fWb8Ag&ved=0ahUKEwiMiPfitIv-AhWQhv0HHd36Bo4Q4dUDCA8&uact=5&oq=stellarium&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIFCAAQgAQyBQgAEIAEMgUIABCABDoLCAAQgAQQsQMQgwE6EQguEIAEELEDEIMBEMcBENEDOgsILhCABBCxAxCDAToLCC4QigUQsQMQgwE6BggjECcQEzoHCC4QigUQQzoNCC4QigUQxwEQ0QMQQzoECAAQAzoTCC4QigUQsQMQgwEQxwEQ0QMQQzoICAAQgAQQsQM6CAguEIAEELEDOg4ILhCKBRCxAxCDARDUAjoNCC4QigUQsQMQgwEQQzoHCAAQigUQQzoFCC4QgAQ6CAguEIAEEMsBOg4ILhCABBDHARCvARDLAUoECEEYAFAAWLQRYIATaABwAXgAgAGaAYgBxQiSAQM0LjaYAQCgAQHAAQE&sclient=gws-wiz-serp"
+    bashCommand = "stellarium -geometry 1280x800"
     process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
 
