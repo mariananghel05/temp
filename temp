@@ -49,6 +49,11 @@ ExecStart=
 ExecStart=-/sbin/agetty --autologin astronomy --noclear %I 38400 linux" > override.conf
 
 cd ~
+echo "#Startx Automatically
+if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+. startx
+logout
+fi" >> ~/.profile
 
 
 
