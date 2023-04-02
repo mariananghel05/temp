@@ -43,9 +43,9 @@ cd stellarium/
 cd ..
 sudo /bin/rm -r stellarium/
 
-sudo cd /etc/systemd/system/
+ cd /etc/systemd/system/
 sudo mkdir getty@tty1.service.d
-sudo cd getty@tty1.service.d
+ cd getty@tty1.service.d
 sudo echo "[Service]
 Type=simple
 ExecStart=
