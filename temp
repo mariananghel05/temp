@@ -22,3 +22,5 @@ then
     sudo echo " python app.py" >> ~/.xinitrc
 fi
 
+echo "startx" >> ~/.bashrc
+
