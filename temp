@@ -24,10 +24,6 @@ fi
 
 /bin/echo "startx" >> ~/.bashrc
 
-/bin/git clone https://github.com/mariananghel05/temp
-/bin/cp temp/* ~/
-sudo /bin/rm -r temp
-
 
 #draft
 /bin/cd
