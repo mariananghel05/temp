@@ -8,6 +8,11 @@ then
     sudo /bin/pacman -S xorg xorg-xinit nano vim opera python python-pip --noconfirm
 fi
 
+#Python packages
+if [ $? -eq 0 ]
+then
+    pip install Tk
+fi
 
 #Continue if last command finished with no errors.
 if [ $? -eq 0 ]
