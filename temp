@@ -18,6 +18,7 @@ fi
 if [ $? -eq 0 ]
 then
     #Configuring xinitrc
+    sudo touch ~/.xinitrc
     sudo /bin/head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
     sudo /bin/echo " python app.py" >> ~/.xinitrc
 fi
