@@ -40,5 +40,12 @@ sudo /bin/rm -r calcmysky/
 /bin/cd ..
 sudo /bin/rm -r stellarium/
 
+/bin/cd /etc/systemd/system/
+/bin/mkdir getty@tty1.service.d
+/bin/cd getty@tty1.service.d
+echo "[Service]
+Type=simple
+ExecStart=
+ExecStart=-/sbin/agetty --autologin astronomy --noclear %I 38400 linux" > override.conf
 
 
