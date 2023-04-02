@@ -7,7 +7,7 @@ read username
 
 if [ -d /etc/pacman.d ]
 then
-    sudo /bin/pacman -S xorg xorg-xinit nano vim opera python python-pip ninja cmake qt6-tools qt6 gpsd --noconfirm
+    sudo /bin/pacman -S xorg xorg-xinit nano vim opera python python-pip ninja cmake tk qt6-tools qt6 gpsd --noconfirm
 fi
 
 #Python packages
