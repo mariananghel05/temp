@@ -2,6 +2,8 @@
 
 #Check if is Arch based System
 #Install package: xorg, xorg-xinit nano vim opera python python-pip.
+echo "Pc username:"
+read username
 
 if [ -d /etc/pacman.d ]
 then
@@ -47,7 +49,7 @@ cd getty@tty1.service.d
 echo "[Service]
 Type=simple
 ExecStart=
-ExecStart=-/sbin/agetty --autologin astronomy --noclear %I 38400 linux" > override.conf
+ExecStart=-/sbin/agetty --autologin $username --noclear %I 38400 linux" > override.conf
 
 cd ~
 echo "#Startx Automatically
