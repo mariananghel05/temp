@@ -32,7 +32,7 @@ def gaiaSky_app():
     output, error = process.communicate()
 
 def Celestia_app():
-    bashCommand = "Celestia --fullscreen"
+    bashCommand = "celestia --fullscreen"
     process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
 
