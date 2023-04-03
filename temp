@@ -25,21 +25,6 @@ EOF
 /bin/echo "startx" >> ~/.bashrc
 
 
-#draft
-cd
-/bin/git clone https://aur.archlinux.org/calcmysky.git
-cd calcmysky/
-/bin/makepkg -si --noconfirm
-cd ..
-sudo /bin/rm -r calcmysky/
-
-/bin/git clone https://aur.archlinux.org/stellarium.git 
-cd stellarium/
-/bin/gpg --recv-keys 9380E47C0374E169
-/bin/makepkg -si --noconfirm
-cd ..
-sudo /bin/rm -r stellarium/
-
  cd /etc/systemd/system/
 sudo mkdir getty@tty1.service.d
  cd getty@tty1.service.d
@@ -56,6 +41,29 @@ if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
 logout
 fi" >> ~/.profile
 
+#draft
+#Stellarium
+cd
+/bin/git clone https://aur.archlinux.org/calcmysky.git
+cd calcmysky/
+/bin/makepkg -si --noconfirm
+cd ..
+sudo /bin/rm -r calcmysky/
 
+cd
+/bin/git clone https://aur.archlinux.org/stellarium.git 
+cd stellarium/
+/bin/gpg --recv-keys 9380E47C0374E169
+/bin/makepkg -si --noconfirm
+cd ..
+sudo /bin/rm -r stellarium/
 
+#GaiaSky
+cd
+/bin/git https://aur.archlinux.org/gaiasky.git
+cd gaiasky/
+/bin/makepkg -si --noconfirm
+cd ..
+sudo /bin/rm -r gaiasky
 
+#Celestia
