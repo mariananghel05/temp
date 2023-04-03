@@ -67,3 +67,9 @@ cd ..
 sudo /bin/rm -r gaiasky
 
 #Celestia
+cd
+/bin/git https://aur.archlinux.org/celestia.git
+cd celestia/
+/bin/makepkg -si --noconfirm
+cd ..
+sudo /bin/rm -r celestia
