@@ -32,7 +32,7 @@ def gaiaSky_app():
     output, error = process.communicate()
 
 def Celestia_app():
-    bashCommand = "celestia --fullscreen"
+    bashCommand = "xdotool windowsize $(xwininfo -name Astronomie | grep -o 0x[0-9]* | head -1) 1 1 & celestia && xdotool windowsize $(xwininfo -name Astronomie | grep -o 0x[0-9]* | head -1) 1920 1080 || xdotool windowsize $(xwininfo -name Astronomie | grep -o 0x[0-9]* | head -1) 1920 1080"
     process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
     output, error = process.communicate()
 
