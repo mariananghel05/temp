@@ -70,7 +70,7 @@ def Celestia():
     root.deiconify()
 
 def Cosmonium():
-    os.system("xterm -geometry {}x{}".format(Props.resolution.x, Props.resolution.y))
+    os.system("xterm -geometry {}x{} -e xrandr | grep connected.primary | grep -oE '[0-9]{3,4}x[0-9]{3,4}'".format(Props.Resolution.x, Props.Resolution.y))
 
 def CommingSoon():
     exit()
