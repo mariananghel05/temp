@@ -58,7 +58,7 @@ def start(method):
     method()
     root.deiconify()
 def Stellarium():
-    os.system("stellarium -geometry {}x{}".format(Props.resolution.x, Props.resolution.y))
+    os.system("stellarium -geometry {}x{}".format(Props.Resolution.x, Props.Resolution.y))
 
 def GaiaSky():
     os.system("gaiasky")
