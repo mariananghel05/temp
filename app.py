@@ -13,7 +13,7 @@ Props = SimpleNamespace(
     Output = "HDMI-2",
     Apps = SimpleNamespace(
         Stellarium = SimpleNamespace(
-            icon = PhotoImage(file="stellarium.png")
+            icon = PhotoImage(file="Stellarium.png")
             ),
         GaiaSky = SimpleNamespace(
             icon = PhotoImage(file="GaiaSky.png")
