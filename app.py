@@ -85,10 +85,10 @@ def ShutDown():
     #passwd.attributes("-fullscreen", True)
     passwd.title("Shutdown - Window")
 
-    #passwd.minsize(Props.Resolution.x, Props.Resolution.y)
-    #passwd.maxsize(Props.Resolution.x, Props.Resolution.y)
-    passwd.minsize(500, 200)
-    passwd.maxsize(500, 200)
+    passwd.minsize(Props.Resolution.x, Props.Resolution.y)
+    passwd.maxsize(Props.Resolution.x, Props.Resolution.y)
+    #passwd.minsize(500, 200)
+    #passwd.maxsize(500, 200)
 
     passwd.columnconfigure(0, weight=1)
     passwd.columnconfigure(1, weight=1)
@@ -112,7 +112,7 @@ button2 = Button(root, image=Props.Apps.GaiaSky.icon, cursor="circle", backgroun
 button3 = Button(root, image=Props.Apps.Celestia.icon, cursor="circle", background="#212133", activebackground="#212144",width=350, height=200, borderwidth=5, command=lambda: start(Celestia)).grid(row=0, column=2)
 
 
-button22 = Button(root, image=Props.Apps.ShutDown.icon , cursor="circle", background="#212133", activebackground="#212144",width=350, height=200, borderwidth=5, command=lambda: start(ShutDown)).grid(row=2, column=2)
+button22 = Button(root, image=Props.Apps.ShutDown.icon , cursor="circle", background="#212133", activebackground="#212144",width=350, height=200, borderwidth=5, command=ShutDown).grid(row=2, column=2)
 #button33 = Button(root, image=Props.Apps.CommingSoon.icon , cursor="circle", background="#212133", activebackground="#212144",width=350, height=200, borderwidth=5, command=CommingSoon).grid(row=1, column=2)
 
 
