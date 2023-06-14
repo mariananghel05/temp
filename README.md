@@ -16,3 +16,7 @@ a:=Clipboard, Clipboard="I see genie"	;save your current clipboard to a variable
 Send, ^v	;paste
 Clipboard:=a	;restore original clipboard
 Return
+
+Numpad9::
+Send {Raw}sdd
+return
